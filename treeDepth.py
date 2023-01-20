@@ -8,3 +8,5 @@ class TreeNode:
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         return 0
+
+# Complete the Solutuion Method and also write a method to test this function.
