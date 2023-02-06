@@ -7,6 +7,19 @@ class TreeNode:
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        return 0
+        if root is None:
+            return 0
+        
+        queue = [root]
+        count = 0
+        while queue:
+            count += 1
+            for _ in range(len(queue)):
+                node = queue.pop(0)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+        return count
 
 # Complete the maxDepth method and also write a method to test it.
